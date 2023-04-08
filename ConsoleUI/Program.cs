@@ -1,8 +1,17 @@
-﻿namespace ConsoleUI;
+﻿using Business.Concrete;
+using DataAccess.Concrete.CarDatabase;
+
+namespace ConsoleUI;
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        CarManager carManager = new CarManager(new EfCarDal());
+        foreach (var car in carManager.GetCarDetails())
+        {
+            Console.WriteLine
+                (car.CarName+"---"+car.BrandName+"---"
+                +car.ColorName+"---"+car.ColorName+"---"+car.DailyPrice+"---");
+        }
     }
 }
