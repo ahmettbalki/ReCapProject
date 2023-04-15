@@ -1,0 +1,2 @@
+﻿INSERT INTO [dbo].[Cars] ([Id], [CarName], [BrandId], [ColorId], [ModelYear], [DailyPrice], [Description]) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+INSERT INTO Cars VALUES (1,"Audi","1","1","2019","965000","Keyifli araba") 

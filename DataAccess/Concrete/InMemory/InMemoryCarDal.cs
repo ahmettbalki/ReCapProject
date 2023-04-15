@@ -15,11 +15,11 @@ namespace DataAccess.Concrete.InMemory
         {
             _cars = new List<Car>
             {
-                new Car { CarId = 1, BrandId = 1, ColorId = 1, ModelYear=2015, DailyPrice=580000, Description="Led farlar"},
-                new Car { CarId = 2, BrandId = 1, ColorId = 1, ModelYear=2011, DailyPrice=160000, Description="Dijital ekran"},
-                new Car { CarId = 3, BrandId = 1, ColorId = 2, ModelYear=2019, DailyPrice=750000, Description="Çelik jant"},
-                new Car { CarId = 4, BrandId = 1, ColorId = 3, ModelYear=2022, DailyPrice=890000, Description="Hidrolik direksiyon"},
-                new Car { CarId = 5, BrandId = 1, ColorId = 2, ModelYear=2020, DailyPrice=850000, Description="Koltuk ısıtması"}
+                new Car { Id = 1, BrandId = 1, ColorId = 1, ModelYear=2015, DailyPrice=580000, Description="Led farlar"},
+                new Car { Id = 2, BrandId = 1, ColorId = 1, ModelYear=2011, DailyPrice=160000, Description="Dijital ekran"},
+                new Car { Id = 3, BrandId = 1, ColorId = 2, ModelYear=2019, DailyPrice=750000, Description="Çelik jant"},
+                new Car { Id = 4, BrandId = 1, ColorId = 3, ModelYear=2022, DailyPrice=890000, Description="Hidrolik direksiyon"},
+                new Car { Id = 5, BrandId = 1, ColorId = 2, ModelYear=2020, DailyPrice=850000, Description="Koltuk ısıtması"}
             };
         }
         public void Add(Car car)
@@ -29,7 +29,7 @@ namespace DataAccess.Concrete.InMemory
 
         public void Delete(Car car)
         {
-            Car carToDelete = _cars.SingleOrDefault(p=>p.CarId == car.CarId);
+            Car carToDelete = _cars.SingleOrDefault(p=>p.Id == car.Id);
             _cars.Remove(carToDelete);
         }
 
@@ -40,12 +40,12 @@ namespace DataAccess.Concrete.InMemory
 
         public Car GetById(int id)
         {
-            return _cars.Where(c => c.CarId == id).First();
+            return _cars.Where(c => c.Id == id).First();
         }
 
         public void Update(Car car)
         {
-            Car carToUpdate = _cars.SingleOrDefault(c=> c.CarId == car.CarId);
+            Car carToUpdate = _cars.SingleOrDefault(c=> c.Id == car.Id);
             carToUpdate.BrandId = car.BrandId;
             carToUpdate.ColorId = car.ColorId;
             carToUpdate.ModelYear = car.ModelYear;
