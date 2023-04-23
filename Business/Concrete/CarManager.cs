@@ -1,15 +1,10 @@
 ﻿using Business.Abstract;
 using Business.Constants;
-using Core.Results;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
