@@ -45,5 +45,11 @@ namespace Business.Constants
         public static string RentalUpdated = "Rental updated";
         public static string RentalListed = "Rentals listed.";
         public static string RentalNameInvalied = "Rental name is invalid.";
+
+        public static string CarImageAdded = "Car image added.";
+        public static string CarImageDeleted = "Car image deleted;";
+        public static string CarImageUpdated = "Car image updated";
+        public static string CarImageListed = "Car image listed.";
+        public static string CarImageNameInvalied = "Car image name is invalid.";
     }
 }
