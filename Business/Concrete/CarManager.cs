@@ -22,6 +22,18 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CarAdded);
         }
 
+        public IResult AddTransactionalTest(Car car)
+        {
+            Add(car);
+            if(car.DailyPrice < 2000000)
+            {
+                throw new Exception("");
+            }
+            Add(car);
+
+            return null;
+        }
+
         public IResult Delete(Car car)
         {
             _carDal.Delete(car);
